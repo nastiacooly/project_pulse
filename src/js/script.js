@@ -73,6 +73,40 @@ $(document).ready(function(){
         });
     });
 
+    //Validation of forms
+
+    function validateForm(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                tel: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, укажите своё имя",
+                    minlength: jQuery.validator.format("Минимум {0} символа")
+                },
+                tel: "Пожалуйста, укажите свой номер телефона для связи",
+                email: {
+                  required: "Для связи с Вами нам необходим Ваш адрес электронной почты",
+                  email: "Электронный адрес необходимо указать в формате name@domain.com"
+                }
+            }
+        });
+
+    };
+
+    validateForm('#consult-form');
+    validateForm('#consultation form');
+    validateForm('#order form');
+
 
 
   });
