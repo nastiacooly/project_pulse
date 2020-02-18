@@ -107,6 +107,10 @@ $(document).ready(function(){
     validateForm('#consultation form');
     validateForm('#order form');
 
+    //Masked Input
+
+    $('input[name=tel]').mask("+7 (999) 999-9999");
+
 
 
   });
