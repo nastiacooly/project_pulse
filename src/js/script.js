@@ -9,9 +9,16 @@ $(document).ready(function(){
             {
                 breakpoint: 992,
                 settings: {
+                    dots: false,
+                    innerHeight: 300
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
                     dots: true,
                     arrows: false,
-                    innerHeight: 300
+                    innerHeight: 200
                 }
             }
         ]
