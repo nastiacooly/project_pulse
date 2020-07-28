@@ -149,6 +149,9 @@ $(document).ready(function(){
         return false;
     });
 
+    
+    //wow.js initialization
+    new WOW().init();
 
 
 
